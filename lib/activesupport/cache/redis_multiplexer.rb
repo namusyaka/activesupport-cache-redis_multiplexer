@@ -1,8 +1,10 @@
-require 'activesupport/cache'
+require 'active_support/cache'
 require 'forwardable'
 
 module ActiveSupport::Cache
   class RedisMultiplexer < Store
+    VERSION = "0.1.0"
+
     extend Forwardable
 
     # Delegates WRITE actions into primary redis instance.

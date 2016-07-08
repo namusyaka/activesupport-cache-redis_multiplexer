@@ -1,26 +1,18 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'activesupport/cache/redis_multiplexer/version'
+require 'activesupport/cache/redis_multiplexer'
 
 Gem::Specification.new do |spec|
   spec.name          = "activesupport-cache-redis_multiplexer"
-  spec.version       = Activesupport::Cache::RedisMultiplexer::VERSION
+  spec.version       = ActiveSupport::Cache::RedisMultiplexer::VERSION
   spec.authors       = ["namusyaka"]
   spec.email         = ["namusyaka@gmail.com"]
 
   spec.summary       = %q{Handling redis-servers both Primary and Read-Replica in your Rails application}
   spec.description   = %q{RedisMultiplexer enables to handle redis-servers both primary and read-replica, in your Rails application.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/namusyaka/activesupport-cache-redis_multiplexer"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
-  # delete this section to allow pushing this gem to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
