@@ -3,7 +3,7 @@ require 'forwardable'
 
 module ActiveSupport::Cache
   class RedisMultiplexer < Store
-    VERSION = "0.1.1"
+    VERSION = "0.1.2"
 
     extend Forwardable
 

@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'activesupport/cache/redis_multiplexer'
+require 'active_support/cache/redis_multiplexer'
 
 Gem::Specification.new do |spec|
   spec.name          = "activesupport-cache-redis_multiplexer"
